@@ -6,11 +6,19 @@ var startx=0;
 var starty=0;
 var endx=0;
 var endy=0;
+var touch;
+
 
 $(document).ready(function(){
     prepareForMobile();
     newgame();
 });
+
+window.onload=function(){
+    touch=document.getElementById("newgamebutton");
+    touch.addEventListener('touchend',newgame);
+}
+
 
 function prepareForMobile(){
 
@@ -161,6 +169,8 @@ $(document).keydown(function(event){
             break;
     }
 });
+
+
 
 /*document.addEventListener('touchmove',function(event){
     event.preventDefault();
