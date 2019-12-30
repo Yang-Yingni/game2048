@@ -162,9 +162,9 @@ $(document).keydown(function(event){
     }
 });
 
-document.addEventListener('touchmove',function(event){
+/*document.addEventListener('touchmove',function(event){
     event.preventDefault();
-});
+});*/
 
 document.addEventListener('touchstart',function(event){
     startx=event.touches[0].pageX;
@@ -172,6 +172,8 @@ document.addEventListener('touchstart',function(event){
 });
 
 document.addEventListener('touchend',function(event){
+    event.preventDefault();
+
     endx=event.changedTouches[0].pageX;
     endy=event.changedTouches[0].pageY;
 
