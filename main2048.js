@@ -17,6 +17,7 @@ $(document).ready(function(){
 window.onload=function(){
     touch=document.getElementById("newgamebutton");
     touch.addEventListener('touchend',newgame);
+    console.log(1);
 }
 
 
